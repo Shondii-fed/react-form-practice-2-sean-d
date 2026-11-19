@@ -1,4 +1,11 @@
 function FeedbackForm({ formData, setFormData }) {
+  
+  const isValid = 
+    formData.name.length >= 3 && 
+    formData.email.includes('@') && 
+    formData.email.includes('.') && 
+    formData.feedback.length >= 1;
+  
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prevData) => ({
@@ -42,6 +49,11 @@ function FeedbackForm({ formData, setFormData }) {
             onChange={handleChange}
         />
       </form>
+      {isValid ? (
+        <button className='button-enabled' type='submit'>Submit</button>
+      ):(
+        <button className='button-disabled' type='submit' disabled>Submit</button>
+      )}
       <h2>Preview Feedback</h2>
       <p>Feedback: {formData.feedback}</p>
     </div>

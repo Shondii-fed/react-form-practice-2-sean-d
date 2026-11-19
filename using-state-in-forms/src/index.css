@@ -1,0 +1,47 @@
+form {
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+}
+
+input {
+    width: 50%;
+    border-radius: 10px;
+    padding: 5px;
+    margin: 4px;
+}
+
+textarea {
+    border-radius: 10px;
+    padding: 5px;
+    margin: 4px;
+}
+
+button {
+    padding: 5px 10px;
+    margin: 4px;
+    border-radius: 15px;
+    background-color: darkmagenta;
+    color: #fff;
+    font-weight: 600;
+}
+
+.button-enabled:hover {
+    background-color: #fff;
+    color: darkmagenta;
+    font-weight: 800;
+}
+
+.button-disabled:disabled {
+    background-color: grey;
+    color: darkgray;
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+h2 {
+    margin-top: 40px;
+    padding-top: 20px;
+}
+
+
