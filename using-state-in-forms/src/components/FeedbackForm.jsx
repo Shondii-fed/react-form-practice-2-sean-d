@@ -32,9 +32,12 @@ function FeedbackForm({ formData, setFormData }) {
         <label htmlFor='feedback'>
             Feedback:
         </label>
-        <input
+        <textarea
             type='text'
             name='feedback'
+            maxLength={200}
+            rows={4}
+            cols={20}
             value={formData.feedback}
             onChange={handleChange}
         />
